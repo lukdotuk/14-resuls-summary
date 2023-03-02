@@ -1,0 +1,342 @@
+/* -------------------- */
+/* custom properties    */
+/* -------------------- */
+
+:root {
+  /* colors */
+  --clr-primary-100: 0, 100%, 67%;
+  --clr-primary-200: 39, 100%, 56%;
+  --clr-primary-300: 166, 100%, 37%;
+  --clr-primary-400: 234, 85%, 45%;
+  
+  --clr-gradients-100: 252, 100%, 67%; /* background */
+  --clr-gradients-200: 241, 81%, 54%; /* background */
+  
+  --clr-gradients-300: 256, 72%, 46%, 1; /* circle */
+  --clr-gradients-400: 241, 72%, 46%, 0; /* circle */
+
+  --clr-neutral-100: 0, 0%, 100%;
+  --clr-neutral-200: 221, 100%, 96%;
+  --clr-neutral-300: 241, 100%, 89%;
+  --clr-neutral-400: 224, 30%, 27%;
+
+  /* font sizes */
+  --fs-800: 4.5rem;
+  --fs-700: 3.5rem;
+  --fs-600: 2rem;
+  --fs-500: 1.5rem;
+  --fs-400: 1.125rem;
+  --fs-300: 1rem;
+
+  /* font family */
+  --ff-sans: "Haken-Grotesk", sans-serif;
+
+  /* font weights */
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+
+  /* border radius */
+  --br-200: 2rem;
+  --br-100: .75rem;
+
+  /* opacity */
+  --op-100: .05;
+  --op-200: .5;
+
+}
+
+@font-face {
+  font-family: "Haken-Grotesk";
+  src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+/* -------------------- */
+/* Reset                */
+/* -------------------- */
+
+/* box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* reset margins and paddings */
+body,
+h1,
+h2,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+/* set up the body */
+body {
+  font-family: var(--ff-sans);
+}
+
+/* set up the wrapper */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* -------------------- */
+/* components mobile    */
+/* -------------------- */
+
+/* backgrounds */
+.intro {
+  background: linear-gradient(to bottom, hsl(var(--clr-gradients-100)), hsl(var(--clr-gradients-200)));
+}
+.score {
+  background: linear-gradient(to bottom, hsl(var(--clr-gradients-300)), hsl(var(--clr-gradients-400)));
+}
+.summary > div:nth-child(2) {
+  background: hsla(var(--clr-primary-100), var(--op-100));
+}
+.summary > div:nth-child(3) {
+  background: hsla(var(--clr-primary-200), var(--op-100));
+}
+.summary > div:nth-child(4) {
+  background: hsla(var(--clr-primary-300), var(--op-100));
+}
+.summary > div:nth-child(5) {
+  background: hsla(var(--clr-primary-400), var(--op-100));
+}
+.summary > div:nth-child(2) {
+  color: hsl(var(--clr-primary-100));
+}
+.summary > div:nth-child(3) {
+  color: hsl(var(--clr-primary-200));
+}
+.summary > div:nth-child(4) {
+  color: hsl(var(--clr-primary-300));
+}
+.summary > div:nth-child(5) {
+  color: hsl(var(--clr-primary-400));
+}
+.continue {
+  background: hsl(var(--clr-neutral-400));
+}
+
+/* margins & padding */
+.intro > h1 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.score {
+  margin-inline: auto;
+  margin-bottom: 1.5rem;
+}
+.points {
+  padding-top: 1.5625rem;
+  line-height: 4.5rem;
+}
+.score > .range {
+  padding-bottom: 1.375rem;
+}
+.intro > h2 {
+  margin-bottom: .5rem;
+}
+.intro > p {
+  padding-inline: 3.59375rem;
+  padding-bottom: 2.5rem;
+}
+.summary {
+  padding: 1.5rem 1.875rem 1.875rem;
+}
+.summary > h2 {
+  padding-left: .125rem;
+  margin-bottom: 1.5rem;
+}
+.tab {
+  padding: 1.0625rem 1rem 1.125rem;
+  margin-bottom: 1rem;
+}
+.summary > div:nth-child(5) {
+  margin-bottom: 1.5rem;
+}
+.continue {
+  display: block;
+  padding: 1.0625rem 7.5rem 1rem;
+  margin-inline: auto;
+}
+
+/* typography */
+.intro {
+  color: hsl(var(--clr-neutral-300));
+  text-align: center;
+}
+.intro > h1 {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-bold);
+}
+.points {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-extra-bold);
+  color: hsl(var(--clr-neutral-100));
+}
+.score > .range {
+  font-size: var(--fs-300);
+}
+.intro > h2 {
+  font-size: var(--fs-500);
+  color: hsl(var(--clr-neutral-100));
+}
+.intro > p {
+  font-size: var(--fs-300);
+}
+.summary > h2 {
+  font-size: var(--fs-400);
+}
+.tab {
+  font-size: var(--fs-300);
+}
+.left {
+  font-weight: var(--fw-regular);
+}
+.right {
+  font-weight: var(--fw-bold);
+}
+
+.continue {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-bold);
+  color: hsl(var(--clr-neutral-100));
+}
+
+/* other */
+.container {
+  min-width: 375px;
+  display: flex;
+  flex-direction: column;
+}
+.intro {
+  border-radius: 0 0 var(--br-200) var(--br-200);
+}
+.score {
+  width: 8.75rem;
+  height: 8.75rem;
+  border-radius: 50%;
+}
+.tab,
+.left,
+.right {
+  display: flex;
+}
+.tab {
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--br-100);
+}
+.left {
+  gap: .75rem
+}
+.right {
+  gap: .5rem;
+}
+.right > .range {
+  opacity: var(--op-200);
+}
+.continue {
+  border: none;
+  border-radius: var(--br-200);
+}
+
+
+@media (hover :hover) {
+  .continue:hover {
+    cursor: pointer;
+    background: linear-gradient(to bottom, hsl(var(--clr-gradients-100)), hsl(var(--clr-gradients-200)));
+  }
+}
+
+/* -------------------- */
+/* components mobile    */
+/* -------------------- */
+
+@media (min-width: 90rem) {
+  
+  /* backgrounds */
+  .container {
+    box-shadow: 1.5rem 0 2rem .5rem hsla(var(--clr-neutral-200), .5);
+  }
+  .container {
+      background-color: hsl(var(--clr-neutral-100));
+  }
+
+  /* margins & padding */
+  .intro > h1 {
+      padding-top: 2.375rem;
+      padding-bottom: 2.1875rem;
+  }
+  .score {
+      margin-bottom: 1.75rem;
+  }
+  .points {
+      padding-top: 3.4375rem;
+  }
+  .score > .range {
+      padding-bottom: 2.875rem;
+  }
+  .intro > h2 {
+      margin-bottom: .875rem;
+  }
+  .intro > p {
+      padding-inline: 3.375rem;
+      padding-bottom: 3.4375rem;
+  }
+  .summary {
+      padding: 2.375rem 2.5rem 2.875rem;
+  }
+  .summary > h2 {
+      margin-bottom: 1.75rem;
+  }
+  .summary > div:nth-child(5) {
+      margin-bottom: 2.5625rem;
+  }
+  .continue {
+      padding: 1.0625rem 6.625rem 1rem;
+  }
+
+  /* typography */
+  .intro > h1 {
+      font-size: var(--fs-500);
+  }
+  .points {
+      font-size: var(--fs-800);
+  }
+  .score > .range {
+      font-size: var(--fs-400);
+  }
+  .intro > h2 {
+      font-size: var(--fs-600);
+  }
+  .intro > p {
+      font-size: var(--fs-400);
+  }
+  .summary > h2 {
+      font-size: var(--fs-500);
+  }
+
+  /* other */
+  .intro {
+      border-radius: var(--br-200);
+  }
+  .score {
+      width: 12.5rem;
+      height: 12.5rem;
+  }
+  .container {
+      flex-direction: row;
+      width: 51.112%;
+      border-radius: var(--br-200);
+  }
+  .summary,
+  .intro {
+      width: 50%
+  }
+
+}
